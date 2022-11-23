@@ -23,10 +23,10 @@ namespace TP_Back.Controllers
         private readonly ILogger<CategoriesController> logger;
         private readonly IMapper mapper;
 
-        public CategoriesController(IUnitOfWork unitOfWork, ILogger<CategoriesController> logger,
+        public CategoriesController(IUnitOfWork uow, ILogger<CategoriesController> logger,
             IMapper mapper)
         {
-            this.uow = unitOfWork;
+            this.uow = uow;
             this.logger = logger;
             this.mapper = mapper;
         }

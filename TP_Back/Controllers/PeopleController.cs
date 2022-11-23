@@ -20,10 +20,10 @@ namespace TP_Back.Controllers
         private readonly ILogger<PeopleController> logger;
         private readonly IMapper mapper;
 
-        public PeopleController(IUnitOfWork unitOfWork, ILogger<PeopleController> logger,
+        public PeopleController(IUnitOfWork uow, ILogger<PeopleController> logger,
             IMapper mapper)
         {
-            this.uow = unitOfWork;
+            this.uow = uow;
             this.logger = logger;
             this.mapper = mapper;
         }

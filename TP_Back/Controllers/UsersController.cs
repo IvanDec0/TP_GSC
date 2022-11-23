@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using TP_Back.Configuration;
 using TP_Back.DataAccess;
+using TP_Back.DataAccess.UnitOfWork;
 using TP_Back.Dto;
 using TP_Back.Entities;
 using TP_Back.Models;
@@ -24,13 +26,11 @@ namespace TP_Back.Controllers
     {
         public static User user = new();
         private readonly IConfiguration configuration;
-        private readonly ILogger<UsersController> logger;
 
-        public UsersController(IConfiguration configuration,
-            ILogger<UsersController> logger)
+        public UsersController(IConfiguration configuration)
         {
             this.configuration = configuration;
-            this.logger = logger;
+            
         }
 
         [HttpPost("register")]
@@ -41,6 +41,8 @@ namespace TP_Back.Controllers
             user.UserName = request.UserName;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
+
+
             return Ok(user);
         }
 
@@ -75,12 +77,13 @@ namespace TP_Back.Controllers
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
                 configuration.GetSection("Key").Value));
 
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             
 
             var token = new JwtSecurityToken(
-                claims: claims, 
+            claims: claims,
+                issuer: "TP_BACK",
                 expires: DateTime.Now.AddDays(1), 
                 signingCredentials: creds
                 );
