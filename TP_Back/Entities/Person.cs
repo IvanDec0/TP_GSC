@@ -2,11 +2,11 @@
 
 namespace TP_Back.Entities
 {
-    public class Person
+    public class Person: GenericEntity
     {
-        public int PersonId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public String? Name { get; set; }
+        public String? PhoneNumber { get; set; }
+        public String? Email { get; set; }
 
     }
 }

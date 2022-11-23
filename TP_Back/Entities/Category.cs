@@ -1,10 +1,12 @@
 ﻿namespace TP_Back.Entities
 {
-    public class Category
+    public class Category : GenericEntity
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
 
-        public List<Thing> Things { get; set; }
+        public string? Description { get; set; }
+        public DateTime CreationDate { get; set; }
+
+        public List<Thing>? Things { get; set; }
+
     }
 }
