@@ -21,6 +21,7 @@ namespace TP_Back.DataAccess.Interface
 
         public void DeleteById(int id);
 
+
         // Async Methods
         Task InsertAsync(T entity);
 

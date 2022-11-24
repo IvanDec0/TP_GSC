@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Xml.Linq;
 using TP_Back.DataAccess;
 using TP_Back.DataAccess.Interface;
 using TP_Back.Entities;
@@ -35,6 +37,8 @@ namespace TP_Back.DataAccess.Repository
             return dbSet.FirstOrDefault(x => x.Id == id);
         }
 
+        
+
         virtual public T add(T entity)
         {
             return dbSet.Add(entity).Entity;
@@ -56,6 +60,7 @@ namespace TP_Back.DataAccess.Repository
             if (entity is not null)
                 Delete(entity);
         }
+
 
         // Async Methods
         public async Task InsertAsync(T entity)

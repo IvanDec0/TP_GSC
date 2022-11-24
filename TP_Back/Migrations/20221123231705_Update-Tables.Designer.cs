@@ -12,8 +12,8 @@ using TP_Back.DataAccess;
 namespace TP_Back.Migrations
 {
     [DbContext(typeof(ThingsContext))]
-    [Migration("20221122173222_Users-Roles")]
-    partial class UsersRoles
+    [Migration("20221123231705_Update-Tables")]
+    partial class UpdateTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -136,10 +136,16 @@ namespace TP_Back.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
