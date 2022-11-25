@@ -68,7 +68,7 @@ namespace TP_Back.DataAccess.Repository
             await dbSet.AddAsync(entity);
         }
 
-        public async Task<T> GetAsync(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
+        public async Task<T>? GetAsync(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null)
         {
             IQueryable<T> query = dbSet;
             if (include != null)
@@ -85,5 +85,6 @@ namespace TP_Back.DataAccess.Repository
             var entity = await dbSet.FindAsync(id);
             dbSet.Remove(entity);
         }
+
     }
 }

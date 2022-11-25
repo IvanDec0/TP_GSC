@@ -25,7 +25,7 @@ namespace TP_Back.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        //public static User user = new();
+        
         private readonly IConfiguration configuration;
         private readonly IUnitOfWork uow;
 
@@ -48,7 +48,7 @@ namespace TP_Back.Controllers
             await uow.UsersRepo.InsertAsync(user);
             await uow.SaveAsync();
             
-            return Ok(user);
+            return Ok();
         }
 
         [HttpPost("login")]
@@ -56,7 +56,7 @@ namespace TP_Back.Controllers
         {
             if (request != null && request.UserName != null && request.Password != null)
             {
-                var user = GetUser(request.UserName, request.Password);
+                var user = uow.UsersRepo.GetOneString(request.UserName);
                 if (user.UserName != request.UserName)
                 {
                     return BadRequest("User does not exist");
@@ -89,12 +89,12 @@ namespace TP_Back.Controllers
 
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            
+
 
             var token = new JwtSecurityToken(
             claims: claims,
-                issuer: "TP_BACK",
-                expires: DateTime.Now.AddDays(1), 
+                issuer: configuration.GetSection("JWT:Issuer").Value,
+                expires: DateTime.Now.AddDays(1),
                 signingCredentials: creds
                 );
 
@@ -127,16 +127,6 @@ namespace TP_Back.Controllers
                 var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
                 return computedHash.SequenceEqual(passwordHash); 
             }
-        }
-
-        private dynamic GetUser(string username, string password)
-        {
-            User ActualUser = uow.UsersRepo.GetOneString(username);
-            if (VerifyPasswordHash(password, ActualUser.PasswordHash, ActualUser.PasswordSalt))
-            {
-                return ActualUser;
-            };
-            return BadRequest("Username or password incorrect"); // Crashea al poner mal los datos
         }
         }
         

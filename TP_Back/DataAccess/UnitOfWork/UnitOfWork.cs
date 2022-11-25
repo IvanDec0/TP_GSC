@@ -15,18 +15,20 @@ namespace TP_Back.DataAccess.UnitOfWork
         public IPersonRepository PeopleRepo { get; private set; }
         public IThingRepository ThingsRepo { get; private set; }
         public IUserRepository<User> UsersRepo { get; private set; }
+        public ILoanRepository LoansRepo { get; private set; }
 
         public UnitOfWork(ThingsContext thingsContext)
         {
-            this._thingsContext = thingsContext;
+            _thingsContext = thingsContext;
 
             CategoryRepo = new CategoryRepository(thingsContext);
             PeopleRepo = new PersonRepository(thingsContext);
             ThingsRepo = new ThingRepository(thingsContext);
             UsersRepo = new UserRepository<User>(thingsContext);
+            LoansRepo = new LoanRepository(thingsContext);
         }
 
-        public int SaveChanges() => this._thingsContext.SaveChanges();
+        public int SaveChanges() => _thingsContext.SaveChanges();
 
         public async Task SaveAsync()
         {

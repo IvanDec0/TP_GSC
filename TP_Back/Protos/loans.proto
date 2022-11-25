@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+option csharp_namespace = "TP_Back.Protos";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service LoanGrpcGateway{
+	rpc StartLoan(NewLoanRequest) returns (Response);
+	rpc CloseLoan(CloseLoanRequest) returns (Response);
+	rpc GetLoans(google.protobuf.Empty) returns (LoansResponse);
+	rpc GetOpenLoans(google.protobuf.Empty) returns (LoansResponse);
+	rpc GetClosedLoans(google.protobuf.Empty) returns (LoansClosedResponse);
+}
+
+
+message NewLoanRequest{
+	int32 personId=1;
+	int32 thingId=2;	
+}
+
+message LoanRequest{
+	int32 id=1;
+	string PersonId=2;
+	string ThingId=3;
+	string Status=4;
+	google.protobuf.Timestamp CreationDate=5;
+	
+}
+
+message CloseLoanRequest{
+	int32 id=1;
+}
+
+message Response{
+	string message=1;
+}
+
+message LoansResponse{
+	repeated LoanRequest allLoans = 1;
+}
+
+message LoanClosedRequest{
+	int32 id=1;
+	string PersonId=2;
+	string ThingId=3;
+	string Status=4;
+	google.protobuf.Timestamp CreationDate=5;
+	google.protobuf.Timestamp ReturnDate=6;
+}
+
+message LoansClosedResponse{
+	repeated LoanClosedRequest allLoans = 1;
+}

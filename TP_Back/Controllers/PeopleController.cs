@@ -18,14 +18,11 @@ namespace TP_Back.Controllers
     {
         private readonly IUnitOfWork uow;
         private readonly ILogger<PeopleController> logger;
-        private readonly IMapper mapper;
 
-        public PeopleController(IUnitOfWork uow, ILogger<PeopleController> logger,
-            IMapper mapper)
+        public PeopleController(IUnitOfWork uow, ILogger<PeopleController> logger)
         {
             this.uow = uow;
             this.logger = logger;
-            this.mapper = mapper;
         }
 
         // GET: api/People
@@ -75,6 +72,9 @@ namespace TP_Back.Controllers
         [HttpPost]
         public async Task<ActionResult<Person>> CreatePerson(Person person)
         {
+            if (person.Name is null || person.Name == string.Empty)
+                return BadRequest("Name is required");
+
             await uow.PeopleRepo.InsertAsync(person);
             await uow.SaveAsync();
             Ok();

@@ -275,3 +275,12 @@ C:\Programming\TP_Back\TP_Back\obj\Debug\net6.0\refint\TP_Back.dll
 C:\Programming\TP_Back\TP_Back\obj\Debug\net6.0\TP_Back.pdb
 C:\Programming\TP_Back\TP_Back\obj\Debug\net6.0\TP_Back.genruntimeconfig.cache
 C:\Programming\TP_Back\TP_Back\obj\Debug\net6.0\ref\TP_Back.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Google.Protobuf.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.AspNetCore.Server.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.AspNetCore.Server.ClientFactory.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.AspNetCore.Server.Reflection.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.Core.Api.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.Net.Client.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.Net.ClientFactory.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.Net.Common.dll
+C:\Programming\TP_Back\TP_Back\bin\Debug\net6.0\Grpc.Reflection.dll

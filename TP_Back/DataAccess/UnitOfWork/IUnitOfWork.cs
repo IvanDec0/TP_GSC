@@ -10,6 +10,7 @@ namespace TP_Back.DataAccess.UnitOfWork
         public IPersonRepository PeopleRepo { get; }
         public IThingRepository ThingsRepo { get; }
         public IUserRepository<User> UsersRepo { get; }
+        public ILoanRepository LoansRepo { get; }
 
         public int SaveChanges();
 

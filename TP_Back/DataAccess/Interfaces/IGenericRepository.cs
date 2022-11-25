@@ -25,7 +25,7 @@ namespace TP_Back.DataAccess.Interface
         // Async Methods
         Task InsertAsync(T entity);
 
-        Task<T> GetAsync(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null);
+        Task<T>? GetAsync(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null);
 
         Task DeleteAsync(int id);
     }

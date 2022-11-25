@@ -7,6 +7,8 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using TP_Back.Protos;
+using TP_Back.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,18 +16,39 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAuthorization();
-builder.Services.AddSwaggerGen(options =>
+var securityScheme = new OpenApiSecurityScheme()
 {
-    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+    Name = "Authorization",
+    Type = SecuritySchemeType.ApiKey,
+    Scheme = "Bearer",
+    BearerFormat = "JWT",
+    In = ParameterLocation.Header,
+    Description = "JSON Web Token based security",
+};
+
+var securityReq = new OpenApiSecurityRequirement()
+{
     {
-        Description = "Standrand Authorization header using the Bearer scheme (\"bearer {token}\")",
-        In = ParameterLocation.Header,
-        Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer",
-        BearerFormat = "JWT"
-    }); ;
-}); ;
+        new OpenApiSecurityScheme
+        {
+            Reference = new OpenApiReference
+            {
+                Type = ReferenceType.SecurityScheme,
+                Id = "Bearer"
+            }
+        },
+        new string[] {}
+    }
+};
+
+
+builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddGrpcSwagger();
+builder.Services.AddSwaggerGen(o =>
+{
+    o.AddSecurityDefinition("Bearer", securityScheme);
+    o.AddSecurityRequirement(securityReq);
+});
 
 builder.Services.AddAuthentication(options =>
 {
@@ -55,13 +78,18 @@ builder.Services.AddDbContext<ThingsContext>(options =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddRazorPages();
-
+builder.Services.AddGrpc(opt => {
+    opt.EnableDetailedErrors = true;
+});
+builder.Services.AddGrpcReflection();
+builder.Services.AddScoped<ILoanServices, LoanServices>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.MapGrpcReflectionService();
 }
 
 // Configure the HTTP request pipeline.
@@ -79,6 +107,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapGrpcService<LoanGrpcService>();
 
 app.MapControllerRoute(
        name: "default",

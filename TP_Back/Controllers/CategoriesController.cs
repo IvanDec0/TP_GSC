@@ -80,7 +80,7 @@ namespace TP_Back.Controllers
 
         // POST: api/Categories
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryDtoCreation createCategoryDto)
         {
             if (!ModelState.IsValid)
