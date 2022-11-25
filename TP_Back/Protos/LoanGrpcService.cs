@@ -88,25 +88,26 @@ namespace TP_Back.Protos
             return response;
         }
 
-        //public override async Task<LoansResponse> GetClosedLoans(Empty request, ServerCallContext context)
-        //{
-        //    var loans = await uow.LoansRepo.GetAllLoansAsync();
-        //    var AllLoans = loans.FindAll(q => q.Status == "Closed");
-        //    var response = new LoansResponse();
-        //    loans.ForEach(a =>
-        //    {
-        //        response.AllLoans.Add(new LoanClosedRequest
-        //        {
-        //            Id = a.Id,
-        //            PersonId = a.Person.Name,
-        //            ThingId = a.Thing.Description,
-        //            Status = a.Status,
-        //            CreationDate = Timestamp.FromDateTime(DateTime.SpecifyKind(a.CreationDate, DateTimeKind.Utc)),
-        //            //ReturnDate = Timestamp.FromDateTime(DateTime.SpecifyKind(a.ReturnDate, DateTimeKind.Utc)) // Parsear posible null
-        //        });
-        //    });
+        public override async Task<LoansClosedResponse> GetClosedLoans(Empty request, ServerCallContext context)
+        {
+            var loans = await uow.LoansRepo.GetAllLoansAsync();
+            var AllLoans = loans.FindAll(q => q.Status == "Closed");
+            var response = new LoansClosedResponse();
+            loans.ForEach(a =>
+            {
+                var b = mapper.Map<LoanDto>(a);
+                response.AllLoans.Add(new LoanClosedRequest
+                {
+                    Id = a.Id,
+                    PersonId = a.Person.Name,
+                    ThingId = a.Thing.Description,
+                    Status = a.Status,
+                    CreationDate = Timestamp.FromDateTime(DateTime.SpecifyKind(a.CreationDate, DateTimeKind.Utc)),
+                    ReturnDate = Timestamp.FromDateTime(DateTime.SpecifyKind(b.ReturnDate, DateTimeKind.Utc)) // Parsear posible null
+                });
+            });
 
-        //    return response;
-        //}
+            return response;
+        }
     }
 }
