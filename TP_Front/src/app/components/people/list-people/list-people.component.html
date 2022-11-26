@@ -1,0 +1,55 @@
+<div class="full-width">
+    <div>
+        <h1 align="center" class="main_text"><a class="fas fa-house" [routerLink]="['/home']"><fa-icon [icon]="faHouse"></fa-icon></a>| List of People |</h1>
+        <hr>
+        <div class="buttons_center">
+        <div align="center" class="add_btn inline_btn">
+            <button class="button b_add" role="button" [routerLink]="['/people/add']">
+                <span>Add</span>
+                <div class="icon">
+                    <i class="fas fa-plus"><fa-icon [icon]="faPlus"></fa-icon></i>
+                </div>
+            </button>
+        </div>
+        <div align="center" class="reload_btn inline_btn">
+            <button class="button b_reload" role="button" (click)="ReloadList()">
+                <span>Reload</span>
+                <div class="icon">
+                    <i class="fas fa-plus"><fa-icon [icon]="faRotate"></fa-icon></i>
+                </div>
+            </button>
+        </div>
+    </div>
+    </div>
+
+<table id="people" class="styled-table">
+    <thead>
+        <tr>
+            <th><h3>Name</h3></th>
+            <th><h3>Phone Number</h3></th>
+            <th><h3>Email</h3></th>
+            <th><h3>#</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people" class="active-row">
+            <td>{{person.name}}</td>
+            <td>{{person.phoneNumber}}</td>
+            <td>{{person.email}}</td>
+            <td>
+                <button class="button b_edit" role="button" [routerLink]="['/people/edit/',person.id]">
+                    <span>Edit</span>
+                    <div class="icon">
+                        <i class="fas fa-pen"><fa-icon [icon]="faEdit"></fa-icon></i>
+                    </div>
+                </button>
+                <br>
+                <button class="button b_remove" role="button" (click)="delete(person.id)">
+                    <span>Delete</span>
+                    <div class="icon">
+                        <i><fa-icon [icon]="faTrash"></fa-icon></i>
+                    </div>
+                </button>
+            </td>
+    </tbody>
+</table>

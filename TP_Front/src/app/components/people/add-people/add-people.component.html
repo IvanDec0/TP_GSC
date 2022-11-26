@@ -1,0 +1,33 @@
+<div class="full-width">
+    <div class="people-box">
+        <h2>New Person</h2>
+        <form [formGroup]="personForm" (ngSubmit)="addPerson()">
+          <div class="user-box">
+            <input type="text" name="Person_name" formControlName="name" required>
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="phone_Number" formControlName="phoneNumber" required>
+            <label>Phone Number</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="Person_email" formControlName="email" type="email" required>
+            <label>Email</label>
+          </div>
+          <button [disabled]="personForm.invalid">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Save
+          </button>
+          <a routerLink="..">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Go back
+          </a>
+        </form>
+      </div>
+    </div>

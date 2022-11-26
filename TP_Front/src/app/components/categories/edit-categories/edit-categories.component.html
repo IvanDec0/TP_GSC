@@ -1,0 +1,25 @@
+<div class="full-width">
+    <div class="people-box">
+        <h2>Edit Category</h2>
+        <form [formGroup]="CategoryForm" (ngSubmit)="editCategory()">
+          <div class="user-box">
+            <input type="text" name="category_desc" formControlName="description" required>
+            <label>Description</label>
+          </div>
+          <button [disabled]="CategoryForm.invalid">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Save
+          </button>
+          <a routerLink="../..">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Go back
+          </a>
+        </form>
+      </div>
+    </div>

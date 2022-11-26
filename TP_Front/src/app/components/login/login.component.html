@@ -1,0 +1,16 @@
+<div class="login-page">
+    <div class="form">
+      <div class="login">
+        <div class="login-header">
+          <h3>LOGIN</h3>
+          <p>Please enter your credentials to login.</p>
+        </div>
+      </div>
+      <form class="login-form" [formGroup]="loginUser" (ngSubmit)="onLogin()">
+        <input type="text" placeholder="Username" id="Username" name="Username" formControlName="UserName" required />
+        <input type="password" placeholder="Password" id="password" name="password" formControlName="Password" required/>
+        <button type="submit" [disabled]="loginUser.invalid" >Login</button>
+      </form>
+    </div>
+  </div>
+
