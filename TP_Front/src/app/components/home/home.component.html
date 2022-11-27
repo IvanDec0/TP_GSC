@@ -1,12 +1,12 @@
 <div *ngIf="!isLoged" class="header">
     <h1 align="center">Welcome!</h1>
     <p>Please login to use the website</p>
-    <button class="button-16" role="button" routerLink="/login">Login</button>
+    <button class="button2" role="button" routerLink="/login">Login</button>
 </div>
 <div *ngIf="isLoged">
     <div class="header">
         <h1 align="center" class="">Welcome!</h1>
-        <button class="button-16 " role="button" (click)="logOut()">Logout</button>
+        <button class="button2" role="button" (click)="logOut()">Logout</button>
     </div>
     <div class="split-ftp right-ftp">
         <div class="wrappergrid-ftp">
@@ -22,7 +22,7 @@
     <li> Add a person to the list</li>
     <li> Edit people from the list </li>
     <li> Delete people from the list</li>
-    <button class="button-15" role="button" routerLink="/people">People</button>
+    <button class="button1" role="button" routerLink="/people">People</button>
                 </div>     
         </div>
         <div class="carddesign-ftp">
@@ -37,7 +37,7 @@
         <li> Add a category to the list</li>
         <li> Edit categories from the list </li>
         <li> Delete categories from the list</li>
-    <button class="button-15" role="button" routerLink="/categories">Categories</button>
+    <button class="button1" role="button" routerLink="/categories">Categories</button>
             </div>     
     </div>
     
