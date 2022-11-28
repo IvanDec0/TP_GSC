@@ -16,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ListCategoriesComponent } from './components/categories/list-categories/list-categories.component';
 import { AddCategoriesComponent } from './components/categories/add-categories/add-categories.component';
 import { EditCategoriesComponent } from './components/categories/edit-categories/edit-categories.component';
+import { RegisterComponent } from './components/register/register.component';
+import { interceptorProvider } from './services/auth-interceptor.service';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { EditCategoriesComponent } from './components/categories/edit-categories
     ListCategoriesComponent,
     AddCategoriesComponent,
     EditCategoriesComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { EditCategoriesComponent } from './components/categories/edit-categories
     HttpClientModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

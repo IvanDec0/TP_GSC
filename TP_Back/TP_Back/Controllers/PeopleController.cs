@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -48,6 +49,7 @@ namespace TP_Back.Controllers
 
         // PUT: api/People/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> EditPerson(int id, Person personEdited)
         {
             if (personEdited.Name is null || personEdited.Id < 1)
@@ -70,6 +72,7 @@ namespace TP_Back.Controllers
 
         // POST: api/People
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<Person>> CreatePerson(Person person)
         {
             if (person.Name is null || person.Name == string.Empty)
@@ -84,6 +87,7 @@ namespace TP_Back.Controllers
 
         // DELETE: api/People/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeletePerson(int id)
         {
             var person = await uow.PeopleRepo.GetAsync(q => q.Id == id);

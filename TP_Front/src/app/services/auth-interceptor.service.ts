@@ -22,7 +22,6 @@ export class AuthInterceptorService {
                     }
             });
         }
-        console.log(intReq);
         return next.handle(intReq);
     }
 }

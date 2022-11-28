@@ -46,10 +46,9 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            policy.WithOrigins("*");
-            policy.WithHeaders("*");
-            policy.WithMethods("*");
-            policy.WithExposedHeaders("*");
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+            policy.AllowAnyOrigin();
         });
 });
 
@@ -95,6 +94,7 @@ builder.Services.AddGrpc(opt => {
 builder.Services.AddGrpcReflection();
 builder.Services.AddScoped<ILoanServices, LoanServices>();
 var app = builder.Build();
+app.UseCors();
 
 if (app.Environment.IsDevelopment())
 {
@@ -119,7 +119,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseCors();
+
 
 app.MapGrpcService<LoanGrpcService>();
 

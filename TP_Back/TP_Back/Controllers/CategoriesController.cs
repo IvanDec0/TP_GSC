@@ -56,6 +56,7 @@ namespace TP_Back.Controllers
 
         // PUT: api/Categories/5
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> EditCategory(int id,[FromBody] CategoryDtoCreation editCategoryDto)
         {
             if (!ModelState.IsValid || id < 1)
@@ -80,7 +81,7 @@ namespace TP_Back.Controllers
 
         // POST: api/Categories
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryDtoCreation createCategoryDto)
         {
             if (!ModelState.IsValid)
@@ -98,6 +99,7 @@ namespace TP_Back.Controllers
 
         // DELETE: api/Categories/5
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             if (id < 1)

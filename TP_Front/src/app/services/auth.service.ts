@@ -17,4 +17,8 @@ export class AuthService {
   public login(loginUser: LoginUser): any {
     return this.httpClient.post(this.authURL + '/login', loginUser, {responseType: 'text'});
   }
+
+  public register(loginUser: LoginUser): any {
+    return this.httpClient.post(this.authURL + '/register', loginUser);
+  }
 }

@@ -10,10 +10,12 @@ import { HomeComponent } from './components/home/home.component';
 import { AddCategoriesComponent } from './components/categories/add-categories/add-categories.component';
 import { EditCategoriesComponent } from './components/categories/edit-categories/edit-categories.component';
 import { ListCategoriesComponent } from './components/categories/list-categories/list-categories.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
   { path: 'people', component: ListPeopleComponent, canActivate: [AuthGuardGuard] },
   { path: 'people/add', component: AddPeopleComponent, canActivate: [AuthGuardGuard] },
   { path: 'people/edit/:id', component: EditPeopleComponent, canActivate: [AuthGuardGuard] },
