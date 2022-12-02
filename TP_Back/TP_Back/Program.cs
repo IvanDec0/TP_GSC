@@ -125,7 +125,7 @@ app.MapGrpcService<LoanGrpcService>();
 
 app.MapControllerRoute(
        name: "default",
-       pattern: "{controller}/{action=Index}/{id?}");
+       pattern: "{controller=Things}/{action=Index}/{id?}");
 
 
 app.Run();

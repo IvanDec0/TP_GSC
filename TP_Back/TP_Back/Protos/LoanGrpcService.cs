@@ -58,8 +58,8 @@ namespace TP_Back.Protos
                 response.AllLoans.Add(new LoanRequest
                 {
                     Id = a.Id,
-                    PersonId = a.Person.Name,
-                    ThingId = a.Thing.Description,
+                    Person = a.Person.Name,
+                    Thing = a.Thing.Description,
                     Status = a.Status,
                     CreationDate = a.CreationDate.ToString()
                 });
@@ -69,16 +69,16 @@ namespace TP_Back.Protos
         }
 
         public override async Task<LoansResponse> GetOpenLoans(Empty request, ServerCallContext context)
-        {
-            var loans = uow.LoansRepo.GetOpenLoans();
+        { 
+            var loans = await uow.LoansRepo.GetOpenLoansAsync();
             var response = new LoansResponse();
             loans.ForEach(a =>
             {
                 response.AllLoans.Add(new LoanRequest
                 {
                     Id = a.Id,
-                    PersonId = a.Person.Name,
-                    ThingId = a.Thing.Description,
+                    Person = a.Person.Name,
+                    Thing = a.Thing.Description,
                     Status = a.Status,
                     CreationDate = a.CreationDate.ToString()
                 }); 
@@ -89,7 +89,7 @@ namespace TP_Back.Protos
 
         public override async Task<LoansClosedResponse> GetClosedLoans(Empty request, ServerCallContext context)
         {
-            var loans = uow.LoansRepo.GetClosedLoans();
+            var loans = await uow.LoansRepo.GetClosedLoansAsync();
             var response = new LoansClosedResponse();
             loans.ForEach(a =>
             {
@@ -97,11 +97,11 @@ namespace TP_Back.Protos
                 response.AllLoans.Add(new LoanClosedRequest
                 {
                     Id = a.Id,
-                    PersonId = a.Person.Name,
-                    ThingId = a.Thing.Description,
+                    Person = a.Person.Name,
+                    Thing = a.Thing.Description,
                     Status = a.Status,
                     CreationDate = a.CreationDate.ToString(),
-                    //ReturnDate = b.ReturnDate.ToString() // Parsear posible null
+                    ReturnDate = b.ReturnDate.ToString() // Parsear posible null
                 });
             });
 

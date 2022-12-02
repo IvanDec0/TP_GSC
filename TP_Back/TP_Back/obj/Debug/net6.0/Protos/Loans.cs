@@ -27,31 +27,31 @@ namespace TP_Back.Protos {
             "ChJQcm90b3MvbG9hbnMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
             "bXAucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90byIzCg5OZXdM",
             "b2FuUmVxdWVzdBIQCghwZXJzb25JZBgBIAEoBRIPCgd0aGluZ0lkGAIgASgF",
-            "ImIKC0xvYW5SZXF1ZXN0EgoKAmlkGAEgASgFEhAKCFBlcnNvbklkGAIgASgJ",
-            "Eg8KB1RoaW5nSWQYAyABKAkSDgoGU3RhdHVzGAQgASgJEhQKDENyZWF0aW9u",
-            "RGF0ZRgFIAEoCSIeChBDbG9zZUxvYW5SZXF1ZXN0EgoKAmlkGAEgASgFIhsK",
-            "CFJlc3BvbnNlEg8KB21lc3NhZ2UYASABKAkiLwoNTG9hbnNSZXNwb25zZRIe",
-            "CghhbGxMb2FucxgBIAMoCzIMLkxvYW5SZXF1ZXN0InwKEUxvYW5DbG9zZWRS",
-            "ZXF1ZXN0EgoKAmlkGAEgASgFEhAKCFBlcnNvbklkGAIgASgJEg8KB1RoaW5n",
-            "SWQYAyABKAkSDgoGU3RhdHVzGAQgASgJEhQKDENyZWF0aW9uRGF0ZRgFIAEo",
-            "CRISCgpSZXR1cm5EYXRlGAYgASgJIjsKE0xvYW5zQ2xvc2VkUmVzcG9uc2US",
-            "JAoIYWxsTG9hbnMYASADKAsyEi5Mb2FuQ2xvc2VkUmVxdWVzdDKRAgoPTG9h",
-            "bkdycGNHYXRld2F5EicKCVN0YXJ0TG9hbhIPLk5ld0xvYW5SZXF1ZXN0Ggku",
-            "UmVzcG9uc2USKQoJQ2xvc2VMb2FuEhEuQ2xvc2VMb2FuUmVxdWVzdBoJLlJl",
-            "c3BvbnNlEjIKCEdldExvYW5zEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Gg4u",
-            "TG9hbnNSZXNwb25zZRI2CgxHZXRPcGVuTG9hbnMSFi5nb29nbGUucHJvdG9i",
-            "dWYuRW1wdHkaDi5Mb2Fuc1Jlc3BvbnNlEj4KDkdldENsb3NlZExvYW5zEhYu",
-            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GhQuTG9hbnNDbG9zZWRSZXNwb25zZUIR",
-            "qgIOVFBfQmFjay5Qcm90b3NiBnByb3RvMw=="));
+            "Il4KC0xvYW5SZXF1ZXN0EgoKAmlkGAEgASgFEg4KBlBlcnNvbhgCIAEoCRIN",
+            "CgVUaGluZxgDIAEoCRIOCgZTdGF0dXMYBCABKAkSFAoMQ3JlYXRpb25EYXRl",
+            "GAUgASgJIh4KEENsb3NlTG9hblJlcXVlc3QSCgoCaWQYASABKAUiGwoIUmVz",
+            "cG9uc2USDwoHbWVzc2FnZRgBIAEoCSIvCg1Mb2Fuc1Jlc3BvbnNlEh4KCGFs",
+            "bExvYW5zGAEgAygLMgwuTG9hblJlcXVlc3QieAoRTG9hbkNsb3NlZFJlcXVl",
+            "c3QSCgoCaWQYASABKAUSDgoGUGVyc29uGAIgASgJEg0KBVRoaW5nGAMgASgJ",
+            "Eg4KBlN0YXR1cxgEIAEoCRIUCgxDcmVhdGlvbkRhdGUYBSABKAkSEgoKUmV0",
+            "dXJuRGF0ZRgGIAEoCSI7ChNMb2Fuc0Nsb3NlZFJlc3BvbnNlEiQKCGFsbExv",
+            "YW5zGAEgAygLMhIuTG9hbkNsb3NlZFJlcXVlc3QykQIKD0xvYW5HcnBjR2F0",
+            "ZXdheRInCglTdGFydExvYW4SDy5OZXdMb2FuUmVxdWVzdBoJLlJlc3BvbnNl",
+            "EikKCUNsb3NlTG9hbhIRLkNsb3NlTG9hblJlcXVlc3QaCS5SZXNwb25zZRIy",
+            "CghHZXRMb2FucxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoOLkxvYW5zUmVz",
+            "cG9uc2USNgoMR2V0T3BlbkxvYW5zEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "Gg4uTG9hbnNSZXNwb25zZRI+Cg5HZXRDbG9zZWRMb2FucxIWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eRoULkxvYW5zQ2xvc2VkUmVzcG9uc2VCEaoCDlRQX0Jh",
+            "Y2suUHJvdG9zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.NewLoanRequest), global::TP_Back.Protos.NewLoanRequest.Parser, new[]{ "PersonId", "ThingId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoanRequest), global::TP_Back.Protos.LoanRequest.Parser, new[]{ "Id", "PersonId", "ThingId", "Status", "CreationDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoanRequest), global::TP_Back.Protos.LoanRequest.Parser, new[]{ "Id", "Person", "Thing", "Status", "CreationDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.CloseLoanRequest), global::TP_Back.Protos.CloseLoanRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.Response), global::TP_Back.Protos.Response.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoansResponse), global::TP_Back.Protos.LoansResponse.Parser, new[]{ "AllLoans" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoanClosedRequest), global::TP_Back.Protos.LoanClosedRequest.Parser, new[]{ "Id", "PersonId", "ThingId", "Status", "CreationDate", "ReturnDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoanClosedRequest), global::TP_Back.Protos.LoanClosedRequest.Parser, new[]{ "Id", "Person", "Thing", "Status", "CreationDate", "ReturnDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TP_Back.Protos.LoansClosedResponse), global::TP_Back.Protos.LoansClosedResponse.Parser, new[]{ "AllLoans" }, null, null, null, null)
           }));
     }
@@ -320,8 +320,8 @@ namespace TP_Back.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoanRequest(LoanRequest other) : this() {
       id_ = other.id_;
-      personId_ = other.personId_;
-      thingId_ = other.thingId_;
+      person_ = other.person_;
+      thing_ = other.thing_;
       status_ = other.status_;
       creationDate_ = other.creationDate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -345,27 +345,27 @@ namespace TP_Back.Protos {
       }
     }
 
-    /// <summary>Field number for the "PersonId" field.</summary>
-    public const int PersonIdFieldNumber = 2;
-    private string personId_ = "";
+    /// <summary>Field number for the "Person" field.</summary>
+    public const int PersonFieldNumber = 2;
+    private string person_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PersonId {
-      get { return personId_; }
+    public string Person {
+      get { return person_; }
       set {
-        personId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        person_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "ThingId" field.</summary>
-    public const int ThingIdFieldNumber = 3;
-    private string thingId_ = "";
+    /// <summary>Field number for the "Thing" field.</summary>
+    public const int ThingFieldNumber = 3;
+    private string thing_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ThingId {
-      get { return thingId_; }
+    public string Thing {
+      get { return thing_; }
       set {
-        thingId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        thing_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -409,8 +409,8 @@ namespace TP_Back.Protos {
         return true;
       }
       if (Id != other.Id) return false;
-      if (PersonId != other.PersonId) return false;
-      if (ThingId != other.ThingId) return false;
+      if (Person != other.Person) return false;
+      if (Thing != other.Thing) return false;
       if (Status != other.Status) return false;
       if (CreationDate != other.CreationDate) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -421,8 +421,8 @@ namespace TP_Back.Protos {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (PersonId.Length != 0) hash ^= PersonId.GetHashCode();
-      if (ThingId.Length != 0) hash ^= ThingId.GetHashCode();
+      if (Person.Length != 0) hash ^= Person.GetHashCode();
+      if (Thing.Length != 0) hash ^= Thing.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (CreationDate.Length != 0) hash ^= CreationDate.GetHashCode();
       if (_unknownFields != null) {
@@ -447,13 +447,13 @@ namespace TP_Back.Protos {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (PersonId.Length != 0) {
+      if (Person.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(PersonId);
+        output.WriteString(Person);
       }
-      if (ThingId.Length != 0) {
+      if (Thing.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(ThingId);
+        output.WriteString(Thing);
       }
       if (Status.Length != 0) {
         output.WriteRawTag(34);
@@ -477,13 +477,13 @@ namespace TP_Back.Protos {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (PersonId.Length != 0) {
+      if (Person.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(PersonId);
+        output.WriteString(Person);
       }
-      if (ThingId.Length != 0) {
+      if (Thing.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(ThingId);
+        output.WriteString(Thing);
       }
       if (Status.Length != 0) {
         output.WriteRawTag(34);
@@ -506,11 +506,11 @@ namespace TP_Back.Protos {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (PersonId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PersonId);
+      if (Person.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Person);
       }
-      if (ThingId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ThingId);
+      if (Thing.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Thing);
       }
       if (Status.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
@@ -533,11 +533,11 @@ namespace TP_Back.Protos {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.PersonId.Length != 0) {
-        PersonId = other.PersonId;
+      if (other.Person.Length != 0) {
+        Person = other.Person;
       }
-      if (other.ThingId.Length != 0) {
-        ThingId = other.ThingId;
+      if (other.Thing.Length != 0) {
+        Thing = other.Thing;
       }
       if (other.Status.Length != 0) {
         Status = other.Status;
@@ -565,11 +565,11 @@ namespace TP_Back.Protos {
             break;
           }
           case 18: {
-            PersonId = input.ReadString();
+            Person = input.ReadString();
             break;
           }
           case 26: {
-            ThingId = input.ReadString();
+            Thing = input.ReadString();
             break;
           }
           case 34: {
@@ -600,11 +600,11 @@ namespace TP_Back.Protos {
             break;
           }
           case 18: {
-            PersonId = input.ReadString();
+            Person = input.ReadString();
             break;
           }
           case 26: {
-            ThingId = input.ReadString();
+            Thing = input.ReadString();
             break;
           }
           case 34: {
@@ -1213,8 +1213,8 @@ namespace TP_Back.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoanClosedRequest(LoanClosedRequest other) : this() {
       id_ = other.id_;
-      personId_ = other.personId_;
-      thingId_ = other.thingId_;
+      person_ = other.person_;
+      thing_ = other.thing_;
       status_ = other.status_;
       creationDate_ = other.creationDate_;
       returnDate_ = other.returnDate_;
@@ -1239,27 +1239,27 @@ namespace TP_Back.Protos {
       }
     }
 
-    /// <summary>Field number for the "PersonId" field.</summary>
-    public const int PersonIdFieldNumber = 2;
-    private string personId_ = "";
+    /// <summary>Field number for the "Person" field.</summary>
+    public const int PersonFieldNumber = 2;
+    private string person_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string PersonId {
-      get { return personId_; }
+    public string Person {
+      get { return person_; }
       set {
-        personId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        person_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "ThingId" field.</summary>
-    public const int ThingIdFieldNumber = 3;
-    private string thingId_ = "";
+    /// <summary>Field number for the "Thing" field.</summary>
+    public const int ThingFieldNumber = 3;
+    private string thing_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ThingId {
-      get { return thingId_; }
+    public string Thing {
+      get { return thing_; }
       set {
-        thingId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        thing_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1315,8 +1315,8 @@ namespace TP_Back.Protos {
         return true;
       }
       if (Id != other.Id) return false;
-      if (PersonId != other.PersonId) return false;
-      if (ThingId != other.ThingId) return false;
+      if (Person != other.Person) return false;
+      if (Thing != other.Thing) return false;
       if (Status != other.Status) return false;
       if (CreationDate != other.CreationDate) return false;
       if (ReturnDate != other.ReturnDate) return false;
@@ -1328,8 +1328,8 @@ namespace TP_Back.Protos {
     public override int GetHashCode() {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (PersonId.Length != 0) hash ^= PersonId.GetHashCode();
-      if (ThingId.Length != 0) hash ^= ThingId.GetHashCode();
+      if (Person.Length != 0) hash ^= Person.GetHashCode();
+      if (Thing.Length != 0) hash ^= Thing.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (CreationDate.Length != 0) hash ^= CreationDate.GetHashCode();
       if (ReturnDate.Length != 0) hash ^= ReturnDate.GetHashCode();
@@ -1355,13 +1355,13 @@ namespace TP_Back.Protos {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (PersonId.Length != 0) {
+      if (Person.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(PersonId);
+        output.WriteString(Person);
       }
-      if (ThingId.Length != 0) {
+      if (Thing.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(ThingId);
+        output.WriteString(Thing);
       }
       if (Status.Length != 0) {
         output.WriteRawTag(34);
@@ -1389,13 +1389,13 @@ namespace TP_Back.Protos {
         output.WriteRawTag(8);
         output.WriteInt32(Id);
       }
-      if (PersonId.Length != 0) {
+      if (Person.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(PersonId);
+        output.WriteString(Person);
       }
-      if (ThingId.Length != 0) {
+      if (Thing.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(ThingId);
+        output.WriteString(Thing);
       }
       if (Status.Length != 0) {
         output.WriteRawTag(34);
@@ -1422,11 +1422,11 @@ namespace TP_Back.Protos {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
-      if (PersonId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PersonId);
+      if (Person.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Person);
       }
-      if (ThingId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ThingId);
+      if (Thing.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Thing);
       }
       if (Status.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Status);
@@ -1452,11 +1452,11 @@ namespace TP_Back.Protos {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      if (other.PersonId.Length != 0) {
-        PersonId = other.PersonId;
+      if (other.Person.Length != 0) {
+        Person = other.Person;
       }
-      if (other.ThingId.Length != 0) {
-        ThingId = other.ThingId;
+      if (other.Thing.Length != 0) {
+        Thing = other.Thing;
       }
       if (other.Status.Length != 0) {
         Status = other.Status;
@@ -1487,11 +1487,11 @@ namespace TP_Back.Protos {
             break;
           }
           case 18: {
-            PersonId = input.ReadString();
+            Person = input.ReadString();
             break;
           }
           case 26: {
-            ThingId = input.ReadString();
+            Thing = input.ReadString();
             break;
           }
           case 34: {
@@ -1526,11 +1526,11 @@ namespace TP_Back.Protos {
             break;
           }
           case 18: {
-            PersonId = input.ReadString();
+            Person = input.ReadString();
             break;
           }
           case 26: {
-            ThingId = input.ReadString();
+            Thing = input.ReadString();
             break;
           }
           case 34: {

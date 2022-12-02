@@ -48,20 +48,23 @@ namespace TP_Back.DataAccess.Repositories
                 .ToList();
         }
 
-        virtual public List<Loan> GetOpenLoans()
+        virtual public async Task<List<Loan>> GetOpenLoansAsync()
         {
-            return context.Loans
+            return await context.Loans
                 .Include(l => l.Thing)
                 .Include(l => l.Person)
-                .ToList().FindAll(q => q.Status == "Open");
+                .Where(l => l.Status == "Open")
+                .ToListAsync();
+                
         }
 
-        virtual public List<Loan> GetClosedLoans()
+        virtual public async Task<List<Loan>> GetClosedLoansAsync()
         {
-            return context.Loans
+            return await context.Loans
                 .Include(l => l.Thing)
                 .Include(l => l.Person)
-                .ToList().FindAll(q => q.Status == "Closed");
+                .Where(l => l.Status == "Closed")
+                .ToListAsync();
         }
     }
 }

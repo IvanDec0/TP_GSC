@@ -86,5 +86,14 @@ namespace TP_Back.DataAccess.Repository
             dbSet.Remove(entity);
         }
 
+        public async Task<IEnumerable<T>> GetAllAsync() => await dbSet.ToListAsync();
+
+        public async Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = dbSet;
+            query = includeProperties.Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
+            return await query.ToListAsync();
+
+        }
     }
 }

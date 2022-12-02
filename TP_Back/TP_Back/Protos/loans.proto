@@ -21,8 +21,8 @@ message NewLoanRequest{
 
 message LoanRequest{
 	int32 id=1;
-	string PersonId=2;
-	string ThingId=3;
+	string Person=2;
+	string Thing=3;
 	string Status=4;
 	string CreationDate=5;
 	
@@ -42,8 +42,8 @@ message LoansResponse{
 
 message LoanClosedRequest{
 	int32 id=1;
-	string PersonId=2;
-	string ThingId=3;
+	string Person=2;
+	string Thing=3;
 	string Status=4;
 	string CreationDate=5;
 	string ReturnDate=6;

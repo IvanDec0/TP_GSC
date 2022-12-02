@@ -12,8 +12,8 @@ namespace TP_Back.DataAccess.Interfaces
 
         public List<Loan> GetAllLoans();
 
-        public List<Loan> GetOpenLoans();
+        public Task<List<Loan>> GetOpenLoansAsync();
 
-        public List<Loan> GetClosedLoans();
+        public Task<List<Loan>> GetClosedLoansAsync();
     }
 }

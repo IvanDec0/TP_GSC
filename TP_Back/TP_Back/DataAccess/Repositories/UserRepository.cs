@@ -23,7 +23,7 @@ namespace TP_Back.DataAccess.Repositories
 
         virtual public T FirstOrDefault(string name)
         {
-            return (T)GetAll().FirstOrDefault(GetOneString(name));
+            return (T)GetAll().FirstOrDefault(GetOneString(name)!);
         }
     
     }

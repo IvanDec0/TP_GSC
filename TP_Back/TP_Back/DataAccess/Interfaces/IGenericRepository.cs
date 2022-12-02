@@ -28,5 +28,8 @@ namespace TP_Back.DataAccess.Interface
         Task<T>? GetAsync(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>>? include = null);
 
         Task DeleteAsync(int id);
+
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetAllAsync(params Expression<Func<T, object>>[] includeProperties);
     }
 }
